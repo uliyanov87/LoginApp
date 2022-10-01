@@ -24,20 +24,20 @@
                                 </buttonConfiguration>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgu-dh-AgO">
-                                <rect key="frame" x="20" y="468.66666666666669" width="353" height="29.666666666666686"/>
+                                <rect key="frame" x="20" y="468.66666666666669" width="353" height="28.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFD-Dx-cJE">
-                                        <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="29.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="28.333333333333332"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMU-Ff-g26">
-                                        <rect key="frame" x="176.66666666666663" y="0.0" width="176.33333333333337" height="29.666666666666668"/>
+                                        <rect key="frame" x="176.66666666666663" y="0.0" width="176.33333333333337" height="28.333333333333332"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
