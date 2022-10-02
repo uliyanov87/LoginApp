@@ -24,13 +24,13 @@ class LoginViewController: UIViewController {
             guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
             welcomeVC.userName = userNameTF.text
         } else {
-            showReminder(withTitle: "Ooops", andMessage: "Wrong user name or password")
+            showReminder(withTitle: "Invalid login or password", andMessage: "Please, enter correct login and password")
         }
     }
     
     // MARK: - IB Actions
     @IBAction func forgotNameButtonDidTapped() {
-        showReminder(withTitle: "Ooops!!!", andMessage: "Your name is User😘")
+        showReminder(withTitle: "Ooops!!!", andMessage: "Your login is User😘")
     }
     @IBAction func forgotPasswordButtonDidTapped() {
         showReminder(withTitle: "Ooops!!!", andMessage: "Your password is 123😘")
@@ -41,11 +41,13 @@ class LoginViewController: UIViewController {
     }
 }
 
-// MARK: - Extensions
+// MARK: - UIAlertController
 extension LoginViewController {
     private func showReminder(withTitle title: String, andMessage message: String) {
         let reminder = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.passwordTF.text = ""
+        }
         reminder.addAction(okAction)
         present(reminder, animated: true)
     }
