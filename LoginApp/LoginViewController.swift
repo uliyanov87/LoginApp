@@ -22,6 +22,10 @@ class LoginViewController: UIViewController {
         welcomeVC.userName = userNameTF.text
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     @IBAction func forgotNameButtonDidTapped() {
     }
     @IBAction func forgotPasswordButtonDidTapped() {
