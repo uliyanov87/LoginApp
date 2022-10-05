@@ -23,7 +23,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="yno-X1-5Yv" kind="presentation" modalPresentationStyle="fullScreen" id="C4S-GJ-6rD"/>
+                                    <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y5R-UM-DzK"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgu-dh-AgO">
@@ -36,17 +36,17 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="forgotNameButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="1m0-Ai-TtS"/>
+                                            <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EAg-Dv-ap2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMU-Ff-g26">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMU-Ff-g26">
                                         <rect key="frame" x="176.66666666666663" y="0.0" width="176.33333333333337" height="28.333333333333332"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="forgotPasswordButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="OSb-mf-UOo"/>
+                                            <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZL-aU-ZgT"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -83,6 +83,7 @@
                     <connections>
                         <outlet property="passwordTF" destination="3pc-jz-CRN" id="dtM-Nh-QY9"/>
                         <outlet property="userNameTF" destination="urK-KQ-QDh" id="UTn-Cs-TvU"/>
+                        <segue destination="yno-X1-5Yv" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="j9d-wM-gs5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

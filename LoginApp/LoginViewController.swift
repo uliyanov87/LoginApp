@@ -13,27 +13,39 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    // MARK: - Privat Properties
+    private let user = "User"
+    private let password = "123"
+    
     // MARK: - Life Cycles Methods
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if userNameTF.text == "User", passwordTF.text == "123" {
             guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-            welcomeVC.userName = userNameTF.text
-        } else {
-            showReminder(withTitle: "Invalid login or password", andMessage: "Please, enter correct login and password")
+            welcomeVC.user = user
         }
-    }
     
     // MARK: - IB Actions
-    @IBAction func forgotNameButtonDidTapped() {
-        showReminder(withTitle: "Ooops!!!", andMessage: "Your login is User😘")
+    @IBAction func logInPressed() {
+        guard userNameTF.text == user, passwordTF.text == password else {
+            showReminder(
+                withTitle: "Invalid login or password",
+                andMessage: "Please, enter correct login and password",
+                textField: passwordTF
+            )
+            return
+        }
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
-    @IBAction func forgotPasswordButtonDidTapped() {
-        showReminder(withTitle: "Ooops!!!", andMessage: "Your password is 123😘")
+    
+    @IBAction func forgotRegisterData(_ sender: UIButton) {
+        sender.tag == 0
+        ? showReminder(withTitle: "Ooops!!!", andMessage: "Your login is \(user) 😘")
+        : showReminder(withTitle: "Ooops!!!", andMessage: "Your password is \(password) 😘")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -44,10 +56,10 @@ class LoginViewController: UIViewController {
 
 // MARK: - UIAlertController
 extension LoginViewController {
-    private func showReminder(withTitle title: String, andMessage message: String) {
+    private func showReminder(withTitle title: String, andMessage message: String, textField: UITextField? = nil) {
         let reminder = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.passwordTF.text = ""
+            textField?.text = ""
         }
         reminder.addAction(okAction)
         present(reminder, animated: true)
