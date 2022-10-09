@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BAAD2A028F31CF800F11FD2 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAAD29F28F31CF800F11FD2 /* TabBarViewController.swift */; };
+		0BAAD2A228F31D3A00F11FD2 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAAD2A128F31D3A00F11FD2 /* UserInfoViewController.swift */; };
+		0BAAD2A428F31D4C00F11FD2 /* UserBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAAD2A328F31D4C00F11FD2 /* UserBioViewController.swift */; };
+		0BAAD2A728F32FB800F11FD2 /* Extentions + UIVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAAD2A628F32FB800F11FD2 /* Extentions + UIVeiw.swift */; };
 		0BD25DCA28E88DCD00880953 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD25DC928E88DCD00880953 /* AppDelegate.swift */; };
 		0BD25DCC28E88DCD00880953 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD25DCB28E88DCD00880953 /* SceneDelegate.swift */; };
 		0BD25DCE28E88DCD00880953 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD25DCD28E88DCD00880953 /* LoginViewController.swift */; };
@@ -14,9 +18,14 @@
 		0BD25DD328E88DCE00880953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BD25DD228E88DCE00880953 /* Assets.xcassets */; };
 		0BD25DD628E88DCE00880953 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BD25DD428E88DCE00880953 /* LaunchScreen.storyboard */; };
 		0BD25DDE28E8E66800880953 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD25DDD28E8E66800880953 /* WelcomeViewController.swift */; };
+		0BD25DE628EDEE8800880953 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD25DE528EDEE8800880953 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BAAD29F28F31CF800F11FD2 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		0BAAD2A128F31D3A00F11FD2 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		0BAAD2A328F31D4C00F11FD2 /* UserBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBioViewController.swift; sourceTree = "<group>"; };
+		0BAAD2A628F32FB800F11FD2 /* Extentions + UIVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions + UIVeiw.swift"; sourceTree = "<group>"; };
 		0BD25DC628E88DCD00880953 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BD25DC928E88DCD00880953 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BD25DCB28E88DCD00880953 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +35,7 @@
 		0BD25DD528E88DCE00880953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BD25DD728E88DCE00880953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BD25DDD28E8E66800880953 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		0BD25DE528EDEE8800880953 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BAAD2A528F32F8300F11FD2 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				0BAAD2A628F32FB800F11FD2 /* Extentions + UIVeiw.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		0BD25DBD28E88DCD00880953 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +81,7 @@
 				0BD25DDF28EDE90100880953 /* App */,
 				0BD25DE128EDE97F00880953 /* Storyboards */,
 				0BD25DD228E88DCE00880953 /* Assets.xcassets */,
+				0BAAD2A528F32F8300F11FD2 /* Extentions */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
@@ -82,6 +101,9 @@
 			children = (
 				0BD25DCD28E88DCD00880953 /* LoginViewController.swift */,
 				0BD25DDD28E8E66800880953 /* WelcomeViewController.swift */,
+				0BAAD29F28F31CF800F11FD2 /* TabBarViewController.swift */,
+				0BAAD2A128F31D3A00F11FD2 /* UserInfoViewController.swift */,
+				0BAAD2A328F31D4C00F11FD2 /* UserBioViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -98,6 +120,7 @@
 		0BD25DE228EDE99F00880953 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0BD25DE528EDEE8800880953 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,8 +197,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BD25DCE28E88DCD00880953 /* LoginViewController.swift in Sources */,
+				0BAAD2A728F32FB800F11FD2 /* Extentions + UIVeiw.swift in Sources */,
+				0BAAD2A228F31D3A00F11FD2 /* UserInfoViewController.swift in Sources */,
 				0BD25DDE28E8E66800880953 /* WelcomeViewController.swift in Sources */,
 				0BD25DCA28E88DCD00880953 /* AppDelegate.swift in Sources */,
+				0BD25DE628EDEE8800880953 /* User.swift in Sources */,
+				0BAAD2A028F31CF800F11FD2 /* TabBarViewController.swift in Sources */,
+				0BAAD2A428F31D4C00F11FD2 /* UserBioViewController.swift in Sources */,
 				0BD25DCC28E88DCD00880953 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
